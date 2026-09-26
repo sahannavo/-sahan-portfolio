@@ -1,0 +1,50 @@
+.landscape-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  overflow: hidden;
+  background: #000000;
+  perspective: 1000px;
+}
+
+.landscape-grid {
+  position: absolute;
+  /* Position it lower to create a horizon line in the middle of the screen */
+  top: 40%; 
+  left: -50%;
+  width: 200%;
+  height: 150%;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.12) 1px, transparent 1px);
+  background-size: 60px 60px;
+  transform-origin: center top;
+  /* Rotate heavily to simulate a deep flat plane stretching to the horizon */
+  transform: rotateX(75deg);
+  animation: scrollGrid 2.5s linear infinite;
+  box-shadow: 0 0 100px rgba(255, 255, 255, 0.1) inset;
+}
+
+@keyframes scrollGrid {
+  0% {
+    transform: rotateX(75deg) translateY(0);
+  }
+  100% {
+    /* Translate exactly one grid size (60px) to loop perfectly */
+    transform: rotateX(75deg) translateY(60px);
+  }
+}
+
+.landscape-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* This creates a fade into blackness at the horizon and soft edges */
+  background: radial-gradient(circle at 50% 30%, transparent 0%, #000000 60%);
+  z-index: 1;
+}
