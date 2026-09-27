@@ -834,12 +834,13 @@ footer {
   flex-direction: column;
   line-height: 1.1;
   text-transform: lowercase;
+  will-change: transform, opacity;
 }
 
 .text-hello {
   color: #ffffff;
-  animation: helloZoomIn 1.5s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-  animation-delay: 1.2s;
+  animation: helloZoomIn 1.0s cubic-bezier(0.77, 0, 0.175, 1) forwards;
+  animation-delay: 0.5s;
 }
 
 .text-hello span:last-child {
@@ -850,9 +851,8 @@ footer {
   color: #ffffff;
   opacity: 0;
   transform: scale(3);
-  /* Starts at 1.5s, ends at 3.5s total time */
-  animation: sahanSequence 2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-  animation-delay: 1.8s;
+  animation: sahanSequence 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: 1.2s;
 }
 
 .text-sahan span:last-child {
@@ -870,6 +870,7 @@ footer {
 .portfolio-content.animate-in .hero-content,
 .portfolio-content.animate-in .navbar {
   animation: sahanZoomOut 1.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  will-change: transform, opacity;
 }
 
 .portfolio-content.animate-in .lanyard-wrapper {
@@ -887,20 +888,20 @@ footer {
 }
 
 @keyframes helloZoomIn {
-  0% { transform: scale(1); opacity: 1; filter: blur(0); }
-  100% { transform: scale(5); opacity: 0; filter: blur(10px); }
+  0% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(5); opacity: 0; }
 }
 
 @keyframes sahanSequence {
-  0% { transform: scale(3); opacity: 0; filter: blur(10px); }
-  30% { transform: scale(1); opacity: 1; filter: blur(0); }
-  70% { transform: scale(1); opacity: 1; filter: blur(0); }
-  100% { transform: scale(5); opacity: 0; filter: blur(10px); }
+  0% { transform: scale(3); opacity: 0; }
+  30% { transform: scale(1); opacity: 1; }
+  70% { transform: scale(1); opacity: 1; }
+  100% { transform: scale(5); opacity: 0; }
 }
 
 @keyframes sahanZoomOut {
-  0% { transform: scale(3); opacity: 0; filter: blur(10px); }
-  100% { transform: none; opacity: 1; filter: blur(0); }
+  0% { transform: scale(3); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
 }
 
 @layer base {
