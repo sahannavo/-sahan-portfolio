@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, lazy, Suspense } from 'react';
 import './index.css';
 import TargetCursor from './TargetCursor';
 import Lanyard from './Lanyard';
@@ -6,11 +6,19 @@ import GradientWaves from './GradientWaves';
 import FolderFloat from './FolderFloat';
 import profilePhoto from './assets/profile_photo.png';
 
-// Import new section components
-import Skills from './components/Skills';
-import AcademicBackground from './components/AcademicBackground';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+// Lazy load section components so initial bundle is fast & lightweight
+const Skills = lazy(() => import('./components/Skills'));
+const AcademicBackground = lazy(() => import('./components/AcademicBackground'));
+const Projects = lazy(() => import('./components/Projects'));
+const Contact = lazy(() => import('./components/Contact'));
+
+const SECTIONS = [
+  { id: 'home', label: 'Home', transition: '> home' },
+  { id: 'skills', label: 'Skills', transition: '> skills' },
+  { id: 'academic', label: 'Education', transition: '> background' },
+  { id: 'projects', label: 'Projects', transition: '> projects' },
+  { id: 'contact', label: 'Contact', transition: '> contact' },
+];
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -20,6 +28,17 @@ function App() {
   const [transitioning, setTransitioning] = useState(false);
   const [transitionText, setTransitionText] = useState('');
 
+  const activeSectionRef = useRef(activeSection);
+  activeSectionRef.current = activeSection;
+
+  const transitioningRef = useRef(transitioning);
+  transitioningRef.current = transitioning;
+
+  const loadingRef = useRef(loading);
+  loadingRef.current = loading;
+
+  const lastScrollTimeRef = useRef(0);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setLoading(false);
@@ -28,6 +47,7 @@ function App() {
   }, []);
 
   const handleNavigate = (section, text) => {
+    if (section === activeSectionRef.current) return;
     setTransitionText(text);
     setTransitioning(true);
     
@@ -37,11 +57,49 @@ function App() {
       window.scrollTo(0, 0); // Reset scroll to top
     }, 500); // 500ms allows the black screen to fade in fully
     
-    // Remove the transition overlay after 2.5s
+    // Remove the transition overlay
     setTimeout(() => {
       setTransitioning(false);
-    }, 2500); 
+    }, 1800); 
   };
+
+  // Scroll down -> next section; Scroll up -> previous section
+  useEffect(() => {
+    const handleWheel = (e) => {
+      if (loadingRef.current || transitioningRef.current) return;
+
+      const now = Date.now();
+      if (now - lastScrollTimeRef.current < 1200) return; // cooldown debounce
+
+      const scrollY = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+      const windowHeight = window.innerHeight;
+      const docHeight = document.documentElement.scrollHeight;
+      const atBottom = scrollY + windowHeight >= docHeight - 15;
+      const atTop = scrollY <= 15;
+
+      const currentIndex = SECTIONS.findIndex((s) => s.id === activeSectionRef.current);
+      if (currentIndex === -1) return;
+
+      if (e.deltaY > 30) {
+        // Scrolling down
+        if (atBottom && currentIndex < SECTIONS.length - 1) {
+          lastScrollTimeRef.current = now;
+          const next = SECTIONS[currentIndex + 1];
+          handleNavigate(next.id, next.transition);
+        }
+      } else if (e.deltaY < -30) {
+        // Scrolling up
+        if (atTop && currentIndex > 0) {
+          lastScrollTimeRef.current = now;
+          const prev = SECTIONS[currentIndex - 1];
+          handleNavigate(prev.id, prev.transition);
+        }
+      }
+    };
+
+    window.addEventListener('wheel', handleWheel, { passive: true });
+    return () => window.removeEventListener('wheel', handleWheel);
+  }, []);
 
   return (
     <div className="portfolio-container">
@@ -50,6 +108,27 @@ function App() {
         hideDefaultCursor={true}
         parallaxOn={true}
       />
+
+      {/* Persistent Navigation Header */}
+      <header className="navbar">
+        <button 
+          className="logo cursor-target"
+          onClick={() => handleNavigate('home', '> home')}
+        >
+          SW.
+        </button>
+        <nav className="nav-links">
+          {SECTIONS.map((sec) => (
+            <button
+              key={sec.id}
+              className={`cursor-target ${activeSection === sec.id ? 'active' : ''}`}
+              onClick={() => handleNavigate(sec.id, sec.transition)}
+            >
+              {sec.label}
+            </button>
+          ))}
+        </nav>
+      </header>
 
       {loading && (
         <div className="loader-overlay">
@@ -162,10 +241,12 @@ function App() {
           </section>
         )}
 
-        {activeSection === 'skills' && <Skills onBack={() => handleNavigate('home', '> home')} />}
-        {activeSection === 'academic' && <AcademicBackground onBack={() => handleNavigate('home', '> home')} />}
-        {activeSection === 'projects' && <Projects onBack={() => handleNavigate('home', '> home')} />}
-        {activeSection === 'contact' && <Contact onBack={() => handleNavigate('home', '> home')} />}
+        <Suspense fallback={<div style={{ minHeight: '100vh' }} />}>
+          {activeSection === 'skills' && <Skills onBack={() => handleNavigate('home', '> home')} />}
+          {activeSection === 'academic' && <AcademicBackground onBack={() => handleNavigate('home', '> home')} />}
+          {activeSection === 'projects' && <Projects onBack={() => handleNavigate('home', '> home')} />}
+          {activeSection === 'contact' && <Contact onBack={() => handleNavigate('home', '> home')} />}
+        </Suspense>
 
         {activeSection === 'home' && (
           <footer>
