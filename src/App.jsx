@@ -166,42 +166,94 @@ function App() {
               transparent={true} 
             />
             <div className="hero-content" style={{ zIndex: 11, pointerEvents: 'none' }}>
+              <div className="hero-badge cursor-target" style={{ pointerEvents: 'auto' }}>
+                <span className="hero-badge-dot"></span>
+                <span>OPEN FOR PROJECT MANAGER / TECH INTERNSHIPS</span>
+              </div>
+
               <h1 className="hero-title cursor-target" style={{ pointerEvents: 'auto' }}>Sahan Weerasingha</h1>
               <h2 className="hero-subtitle" style={{ pointerEvents: 'auto' }}>Project Manager Intern & Developer</h2>
               <p className="hero-description" style={{ pointerEvents: 'auto' }}>
                 Computer Science undergraduate at NSBM Green University with hands-on experience leading team projects and managing client web platforms from requirements to delivery. Skilled in project planning, task delegation, and full-stack development.
               </p>
-              <div className="code-window cursor-target" style={{ pointerEvents: 'auto' }}>
-                <div className="code-header">
-                  <div className="code-dots">
-                    <div className="dot red"></div>
-                    <div className="dot yellow"></div>
-                    <div className="dot green"></div>
+
+              {/* Action Buttons */}
+              <div className="hero-actions" style={{ pointerEvents: 'auto' }}>
+                <button 
+                  className="hero-btn-primary cursor-target"
+                  onClick={() => handleNavigate('projects', '> projects')}
+                >
+                  Explore Projects &rarr;
+                </button>
+                <button 
+                  className="hero-btn-secondary cursor-target"
+                  onClick={() => handleNavigate('contact', '> contact')}
+                >
+                  Get In Touch
+                </button>
+              </div>
+
+              {/* Split Interactive Dashboard */}
+              <div className="hero-split-grid" style={{ pointerEvents: 'auto' }}>
+                {/* Code Window */}
+                <div className="code-window cursor-target" style={{ margin: 0, maxWidth: '100%' }}>
+                  <div className="code-header">
+                    <div className="code-dots">
+                      <div className="dot red"></div>
+                      <div className="dot yellow"></div>
+                      <div className="dot green"></div>
+                    </div>
+                    <div className="code-title">developer.js</div>
                   </div>
-                  <div className="code-title">developer.js</div>
+                  <div className="code-body">
+                    <div><span className="code-keyword">const</span> <span className="code-variable">candidate</span> = {'{'}</div>
+                    <div style={{ paddingLeft: '1.2rem' }}>
+                      <span className="code-property">name</span>: <span className="code-string">'Sahan Weerasingha'</span>,
+                    </div>
+                    <div style={{ paddingLeft: '1.2rem' }}>
+                      <span className="code-property">targetRole</span>: <span className="code-string">'Project Manager Intern'</span>,
+                    </div>
+                    <div style={{ paddingLeft: '1.2rem' }}>
+                      <span className="code-property">stack</span>: [<span className="code-string">'React'</span>, <span className="code-string">'Node'</span>, <span className="code-string">'Java'</span>],
+                    </div>
+                    <div style={{ paddingLeft: '1.2rem' }}>
+                      <span className="code-property">leadership</span>: [<span className="code-string">'Planning'</span>, <span className="code-string">'Delegation'</span>],
+                    </div>
+                    <div style={{ paddingLeft: '1.2rem' }}>
+                      <span className="code-property">status</span>: <span className="code-string">'available'</span>
+                    </div>
+                    <div>{'}'};</div>
+                  </div>
                 </div>
-                <div className="code-body">
-                  <div><span className="code-keyword">const</span> <span className="code-variable">candidate</span> = {'{'}</div>
-                  <div style={{ paddingLeft: '1.5rem' }}>
-                    <span className="code-property">name</span>: <span className="code-string">'Sahan Weerasingha'</span>,
+
+                {/* Highlights Card */}
+                <div className="hero-highlights-card cursor-target">
+                  <div className="hero-stat-row">
+                    <div className="hero-stat-item">
+                      <div className="hero-stat-number">30+</div>
+                      <div className="hero-stat-label">Pages Delivered</div>
+                    </div>
+                    <div className="hero-stat-item">
+                      <div className="hero-stat-number">100%</div>
+                      <div className="hero-stat-label">Client Handover</div>
+                    </div>
                   </div>
-                  <div style={{ paddingLeft: '1.5rem' }}>
-                    <span className="code-property">targetRole</span>: <span className="code-string">'Project Manager Intern'</span>,
+
+                  <div>
+                    <div style={{ fontSize: '0.8rem', color: '#888', marginBottom: '0.6rem', fontFamily: 'JetBrains Mono', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                      // Core Domains
+                    </div>
+                    <div className="hero-skills-mini">
+                      <span className="hero-mini-pill">Project Planning</span>
+                      <span className="hero-mini-pill">Team Lead</span>
+                      <span className="hero-mini-pill">Stakeholder Comms</span>
+                      <span className="hero-mini-pill">Full-Stack Tech</span>
+                    </div>
                   </div>
-                  <div style={{ paddingLeft: '1.5rem' }}>
-                    <span className="code-property">stack</span>: [<span className="code-string">'React'</span>, <span className="code-string">'Node.js'</span>, <span className="code-string">'Java'</span>, <span className="code-string">'MySQL'</span>],
-                  </div>
-                  <div style={{ paddingLeft: '1.5rem' }}>
-                    <span className="code-property">leadership</span>: [<span className="code-string">'Planning'</span>, <span className="code-string">'Task Delegation'</span>, <span className="code-string">'Client Comms'</span>],
-                  </div>
-                  <div style={{ paddingLeft: '1.5rem' }}>
-                    <span className="code-property">status</span>: <span className="code-string">'seeking PM internship'</span>
-                  </div>
-                  <div>{'}'};</div>
                 </div>
               </div>
               
-              <div style={{ margin: '4rem 0 6rem 0', display: 'flex', justifyContent: 'center', pointerEvents: 'auto' }}>
+              <div style={{ margin: '2rem 0 4rem 0', display: 'flex', justifyContent: 'center', pointerEvents: 'auto' }}>
                 <FolderFloat
                   items={['Skills & Expertise', 'Academic Background', 'Selected Projects', 'Let\'s Connect']}
                   label="Portfolio"

@@ -51,7 +51,7 @@ export default function Lanyard({
         gl={{ alpha: transparent }}
         onCreated={({ gl }) => gl.setClearColor(new THREE.Color(0x000000), transparent ? 0 : 1)}
       >
-        <ambientLight intensity={Math.PI} />
+        <ambientLight intensity={1.5} />
         <Physics gravity={gravity} timeStep={isMobile ? 1 / 30 : 1 / 60}>
           <Band
             isMobile={isMobile}
@@ -64,28 +64,28 @@ export default function Lanyard({
         </Physics>
         <Environment blur={0.75}>
           <Lightformer
-            intensity={2}
+            intensity={1.2}
             color="white"
             position={[0, -1, 5]}
             rotation={[0, 0, Math.PI / 3]}
             scale={[100, 0.1, 1]}
           />
           <Lightformer
-            intensity={3}
+            intensity={1.5}
             color="white"
             position={[-1, -1, 1]}
             rotation={[0, 0, Math.PI / 3]}
             scale={[100, 0.1, 1]}
           />
           <Lightformer
-            intensity={3}
+            intensity={1.5}
             color="white"
             position={[1, 1, 1]}
             rotation={[0, 0, Math.PI / 3]}
             scale={[100, 0.1, 1]}
           />
           <Lightformer
-            intensity={10}
+            intensity={4}
             color="white"
             position={[-10, 0, 14]}
             rotation={[0, Math.PI / 2, Math.PI / 3]}
@@ -238,12 +238,12 @@ function Band({
       ctx.drawImage(img, dx, dy, dw, dh);
       ctx.restore();
       
-      // 2. Draw "SOFTWARE DEVELOPER" text
+      // 2. Draw Role text
       let cursorY = ry + topMargin + photoHeight + rh * 0.06;
       ctx.fillStyle = '#888888';
-      ctx.font = `500 ${rw * 0.045}px 'JetBrains Mono', monospace`;
+      ctx.font = `600 ${rw * 0.042}px 'JetBrains Mono', monospace`;
       ctx.textAlign = 'center';
-      ctx.fillText('SOFTWARE DEVELOPER', rx + rw/2, cursorY);
+      ctx.fillText('PROJECT MANAGER INTERN', rx + rw/2, cursorY);
       
       // 3. Draw "SAHAN" text
       cursorY += rh * 0.09;
@@ -434,10 +434,10 @@ function Band({
               <meshPhysicalMaterial
                 map={cardMap}
                 map-anisotropy={16}
-                clearcoat={isMobile ? 0 : 1}
-                clearcoatRoughness={0.15}
-                roughness={0.9}
-                metalness={0.8}
+                clearcoat={isMobile ? 0 : 0.4}
+                clearcoatRoughness={0.3}
+                roughness={0.4}
+                metalness={0.05}
               />
             </mesh>
             <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
