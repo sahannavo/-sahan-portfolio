@@ -7,26 +7,6 @@ const ArrowUpRight = () => (
   </svg>
 );
 
-const ImagePlaceholder = () => (
-  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.5 }}>
-    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-    <circle cx="8.5" cy="8.5" r="1.5"></circle>
-    <polyline points="21 15 16 10 5 21"></polyline>
-  </svg>
-);
-
-const SquareIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.7 }}>
-    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-  </svg>
-);
-
-const CircleIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ opacity: 0.7 }}>
-    <circle cx="12" cy="12" r="10"></circle>
-  </svg>
-);
-
 export default function Projects({ onBack }) {
   return (
     <section id="projects" className="section-page">
@@ -35,104 +15,129 @@ export default function Projects({ onBack }) {
       </button>
       
       <div style={{ textAlign: 'center', marginBottom: '3rem' }}>
-        <h2 className="section-title" style={{ marginBottom: '1rem' }}>Selected Projects</h2>
+        <h2 className="section-title" style={{ marginBottom: '1rem' }}>Featured & Client Projects</h2>
       </div>
 
       <div className="projects-library-grid">
         
-        {/* Featured Project */}
+        {/* Featured Project: New Step Finance (Client Freelance) */}
         <div className="lib-card featured">
           <div className="lib-featured-image">
             <div className="lib-featured-badge">
-              ★ Featured
+              ★ Client Project (Freelance) · 2026
             </div>
-            <img src="/inklink.jpg" alt="InkLink" />
+            <img src="/new_step_finance.png" alt="New Step Finance Website" />
           </div>
-          <h3 className="lib-title">InkLink</h3>
+          <h3 className="lib-title">New Step Finance Website</h3>
           <p className="lib-desc">
-            A modern, highly interactive story-sharing platform designed to connect users through real-time dynamic feeds and immersive live-story formats. It features robust creator profiles, secure authentication, and scalable data management. This full-stack application was meticulously built from the ground up, utilizing Spring Boot for a high-performance backend, MySQL for reliable data storage, and a polished HTML/CSS/JS interface to deliver a seamless, native-like user experience.
+            Engaged by an Australian mortgage broker to manage the complete lifecycle from requirements to delivery: a unique, custom-designed multi-page finance platform of 30+ pages covering home loans, refinancing, and guides. Built interactive financial calculators (savings growth & home-loan offset) with Chart.js, an Express backend with APIs for blogs, file uploads, AI-powered web assistant, and an admin dashboard for client content management.
           </p>
-          <div className="lib-tall-badge">HTML · CSS · JS · MySQL · Spring Boot</div>
+          <div className="lib-tall-badge">React · Vite · Node.js · Express · Prisma · JWT · Chart.js · GSAP</div>
           <div className="lib-links">
-            <a href="https://github.com/sahannavo/InkLink" className="lib-link lib-link-blue cursor-target"><ArrowUpRight /> Code</a>
-            {/* <a href="#" className="lib-link lib-link-blue cursor-target"><ArrowUpRight /> Live</a> */}
+            <span className="lib-link" style={{ color: '#888' }}>Australian Mortgage Broker Client</span>
           </div>
         </div>
 
-        
+        {/* Team Lead Project: BIO POHORA */}
+        <div className="lib-card-tall">
+          <div className="lib-tall-image has-photo">
+            <img src="/bio_pohora.png" alt="BIO POHORA" />
+          </div>
+          <div className="lib-tall-content">
+            <h4 className="lib-tall-title">BIO POHORA (Team Lead)</h4>
+            <div className="lib-tall-desc">
+              Agricultural fertilizer subsidy platform designed to improve transparency through digital tokens, QR verification, and allocation tracking. Directed user-centered design workflow, task delegation, biometric login, and offline-capable interactions.
+            </div>
+            <div className="lib-tall-badge">Team Leadership · HCI · Mobile UX</div>
+          </div>
+        </div>
+
+        {/* Project: RecruteAI */}
+        <div className="lib-card-tall">
+          <div className="lib-tall-image has-photo">
+            <img src="/recrute_ai.jpg" alt="RecruteAI" />
+          </div>
+          <div className="lib-tall-content">
+            <h4 className="lib-tall-title">RecruteAI</h4>
+            <div className="lib-tall-desc">
+              AI-enhanced recruitment platform featuring intelligent candidate matching, automated skill assessments, and pipeline tracking. Developed C# backend architecture for data processing.
+            </div>
+            <div className="lib-tall-badge">C# · HTML5 · CSS3 · JavaScript</div>
+            <div className="lib-tall-links">
+              <a href="https://github.com/sahannavo/recruitment-platform" target="_blank" rel="noreferrer" className="lib-link lib-link-blue cursor-target"><ArrowUpRight /> Code</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Project: InkLink */}
+        <div className="lib-card-tall">
+          <div className="lib-tall-image has-photo">
+            <img src="/inklink.jpg" alt="InkLink" />
+          </div>
+          <div className="lib-tall-content">
+            <h4 className="lib-tall-title">InkLink</h4>
+            <div className="lib-tall-desc">
+              Full-stack creative story-sharing platform with real-time feeds, live-story formats, creator profiles, and secure authentication built with Spring Boot and MySQL.
+            </div>
+            <div className="lib-tall-badge">Spring Boot · MySQL · HTML/CSS/JS</div>
+            <div className="lib-tall-links">
+              <a href="https://github.com/sahannavo/InkLink" target="_blank" rel="noreferrer" className="lib-link lib-link-blue cursor-target"><ArrowUpRight /> Code</a>
+            </div>
+          </div>
+        </div>
+
+        {/* Project: SpotFinder */}
+        <div className="lib-card lib-card-small">
+          <div className="lib-icon-box">
+            <img src="/spotfinder.png" alt="SpotFinder" />
+          </div>
+          <div className="lib-small-content">
+            <h4 className="lib-small-title">SpotFinder</h4>
+            <div className="lib-small-tech">Flutter · Dart · Android Channels</div>
+            <p style={{ fontSize: '0.8rem', color: '#888', marginBottom: '0.5rem' }}>
+              Mobile signal-monitoring app with live dBm readings and animated radar-style indicator.
+            </p>
+          </div>
+        </div>
+
+        {/* Project: BotFriend */}
+        <div className="lib-card lib-card-small">
+          <div className="lib-icon-box">
+            <img src="/botfriend.png" alt="BotFriend" />
+          </div>
+          <div className="lib-small-content">
+            <h4 className="lib-small-title">BotFriend AI</h4>
+            <div className="lib-small-tech">Node.js · Express · OpenRouter API</div>
+            <p style={{ fontSize: '0.8rem', color: '#888', marginBottom: '0.5rem' }}>
+              AI chatbot web app powered by Google Gemma model with server-side history.
+            </p>
+          </div>
+        </div>
+
+        {/* Project: QR Aura */}
+        <div className="lib-card lib-card-small">
+          <div className="lib-icon-box">
+            <img src="/qraura.png" alt="QR Aura" />
+          </div>
+          <div className="lib-small-content">
+            <h4 className="lib-small-title">QR Aura</h4>
+            <div className="lib-small-tech">HTML5 · CSS3 · JavaScript</div>
+            <p style={{ fontSize: '0.8rem', color: '#888', marginBottom: '0.5rem' }}>
+              Customizable offline QR code generator with live styling, colors, and download.
+            </p>
+          </div>
+        </div>
+
+        {/* Project: Find Expression */}
         <div className="lib-card lib-card-small">
           <div className="lib-icon-box">
             <img src="/findexpression.jpg" alt="Find Expression" />
           </div>
           <div className="lib-small-content">
             <h4 className="lib-small-title">Find Expression</h4>
-            <div className="lib-small-tech">Python · face-api.js</div>
+            <div className="lib-small-tech">face-api.js · JavaScript</div>
             <div className="lib-links">
-              <a href="https://github.com/sahannavo/findExpression" className="lib-link lib-link-blue cursor-target"><ArrowUpRight /> Code</a>
-              {/* <a href="#" className="lib-link cursor-target"><ArrowUpRight /> Live</a> */}
-            </div>
-          </div>
-        </div>
-
-        {/* Small Project 2
-        <div className="lib-card lib-card-small">
-          <div className="lib-icon-box">
-            <img src="/rollaball.jpg" alt="RollABall" />
-          </div>
-          <div className="lib-small-content">
-            <h4 className="lib-small-title">RollABall</h4>
-            <div className="lib-small-tech">Unity · C#</div>
-            <div className="lib-links">
-              <a href="#" className="lib-link cursor-target"><ArrowUpRight /> Code</a>
-              <a href="#" className="lib-link cursor-target"><ArrowUpRight /> Live</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Tall Project 1*/}
-        <div className="lib-card-tall">
-          <div className="lib-tall-image has-photo">
-            <img src="/recrute_ai.jpg" alt="recruteAI" />
-          </div>
-          <div className="lib-tall-content">
-            <h4 className="lib-tall-title">recruteAI</h4>
-            <div className="lib-tall-desc">AI-enhanced recruitment platform that bridges the gap between top talent and recruiters. It features intelligent candidate matching, automated skill assessments, and a seamless dashboard for tracking application pipelines. Built with a robust C# backend architecture for complex data processing, paired with a sleek, responsive vanilla HTML/CSS/JS frontend for optimal user experience.</div>
-            <div className="lib-tall-badge">C# · HTML/CSS/JS</div>
-            <div className="lib-tall-links">
-              <a href="https://github.com/sahannavo/recruitment-platform" className="lib-link lib-link-blue cursor-target"><ArrowUpRight /> Code</a>
-              {/* <a href="#" className="lib-link cursor-target"><ArrowUpRight /> Live</a> */}
-            </div>
-          </div>
-        </div>
-
-        {/* Tall Project 2: Placeholder */}
-        <div className="lib-card-tall">
-          <div className="lib-tall-image has-photo">
-            <img src="/sprite_flight.png" alt="Sprite-Flight" />
-          </div>
-          <div className="lib-tall-content">
-            <h4 className="lib-tall-title">Sprite-Flight</h4>
-            <div className="lib-tall-desc">A 2D arcade survival game built with Unity and C#. Steer a ship, dodge flying obstacles, and survive to get a high score! 🚀🛸</div>
-            <div className="lib-tall-badge">Unity · C#</div>
-            <div className="lib-tall-links">
-              <a href="https://github.com/sahannavo/Sprite-Flight" className="lib-link lib-link-blue cursor-target"><ArrowUpRight /> Code</a>
-              <a href=" https://play.unity.com/en/games/3f34482b-cc27-444b-ba9a-395d1cba5915/sprite-flight-build" className="lib-link lib-link-blue cursor-target"><ArrowUpRight /> Live</a>
-            </div>
-          </div>
-        </div>
-
-        {/* Tall Project 3: Placeholder */}
-        <div className="lib-card-tall">
-          <div className="lib-tall-image">
-            <img src="/findexpression.jpg" alt="Find Expression" />
-          </div>
-          <div className="lib-tall-content">
-            <h4 className="lib-tall-title">Find Expression</h4>
-            <div className="lib-tall-desc">Find ExpressionReal-time face detection and emotion recognition web app using face-api.js. Detects faces, recognizes 7 emotions (happy, sad, angry, surprised), and draws 68-point face landmarks.</div>
-            <div className="lib-tall-badge">Python · face-api.js</div>
-            <div className="lib-tall-links">
-              <a href="https://github.com/sahannavo/findExpression" className="lib-link lib-link-blue cursor-target"><ArrowUpRight /> Code</a>
-              {/* <a href="#" className="lib-link cursor-target"><ArrowUpRight /> Live</a> */}
+              <a href="https://github.com/sahannavo/findExpression" target="_blank" rel="noreferrer" className="lib-link lib-link-blue cursor-target"><ArrowUpRight /> Code</a>
             </div>
           </div>
         </div>

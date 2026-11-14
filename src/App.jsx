@@ -167,11 +167,9 @@ function App() {
             />
             <div className="hero-content" style={{ zIndex: 11, pointerEvents: 'none' }}>
               <h1 className="hero-title cursor-target" style={{ pointerEvents: 'auto' }}>Sahan Weerasingha</h1>
-              <h2 className="hero-subtitle" style={{ pointerEvents: 'auto' }}>Software Developer</h2>
+              <h2 className="hero-subtitle" style={{ pointerEvents: 'auto' }}>Project Manager Intern & Developer</h2>
               <p className="hero-description" style={{ pointerEvents: 'auto' }}>
-                A Computer Science undergraduate at NSBM Green University passionate about software
-                development, web technologies, and problem-solving. I craft clean, logic-driven applications
-                and games that deliver seamless digital experiences.
+                Computer Science undergraduate at NSBM Green University with hands-on experience leading team projects and managing client web platforms from requirements to delivery. Skilled in project planning, task delegation, and full-stack development.
               </p>
               <div className="code-window cursor-target" style={{ pointerEvents: 'auto' }}>
                 <div className="code-header">
@@ -183,21 +181,21 @@ function App() {
                   <div className="code-title">developer.js</div>
                 </div>
                 <div className="code-body">
-                  <div><span className="code-keyword">const</span> <span className="code-variable">developer</span> = {'{'}</div>
+                  <div><span className="code-keyword">const</span> <span className="code-variable">candidate</span> = {'{'}</div>
                   <div style={{ paddingLeft: '1.5rem' }}>
                     <span className="code-property">name</span>: <span className="code-string">'Sahan Weerasingha'</span>,
                   </div>
                   <div style={{ paddingLeft: '1.5rem' }}>
-                    <span className="code-property">role</span>: <span className="code-string">'Software Developer'</span>,
+                    <span className="code-property">targetRole</span>: <span className="code-string">'Project Manager Intern'</span>,
                   </div>
                   <div style={{ paddingLeft: '1.5rem' }}>
-                    <span className="code-property">stack</span>: [<span className="code-string">'Java'</span>, <span className="code-string">'Python'</span>, <span className="code-string">'Spring Boot'</span>],
+                    <span className="code-property">stack</span>: [<span className="code-string">'React'</span>, <span className="code-string">'Node.js'</span>, <span className="code-string">'Java'</span>, <span className="code-string">'MySQL'</span>],
                   </div>
                   <div style={{ paddingLeft: '1.5rem' }}>
-                    <span className="code-property">available</span>: <span className="code-boolean">true</span>,
+                    <span className="code-property">leadership</span>: [<span className="code-string">'Planning'</span>, <span className="code-string">'Task Delegation'</span>, <span className="code-string">'Client Comms'</span>],
                   </div>
                   <div style={{ paddingLeft: '1.5rem' }}>
-                    <span className="code-property">status</span>: <span className="code-string">'looking for an internship'</span>
+                    <span className="code-property">status</span>: <span className="code-string">'seeking PM internship'</span>
                   </div>
                   <div>{'}'};</div>
                 </div>

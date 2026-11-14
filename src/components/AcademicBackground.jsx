@@ -7,43 +7,87 @@ export default function AcademicBackground({ onBack }) {
         &larr; Back to Home
       </button>
 
+      <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+        <h2 className="section-title" style={{ marginBottom: '0.5rem' }}>Academic Background</h2>
+      </div>
+
       <div className="git-timeline">
         
-        {/* Node 1 */}
+        {/* Node 1: Degree */}
         <div className="git-node">
           <div className="git-line"></div>
           <div className="git-point"></div>
           
           <div className="git-content">
             <div className="git-meta">
-              <span className="git-ref">commit a1b2c3d</span>
+              <span className="git-ref">commit ed1b2c3</span>
             </div>
             
-            <h3 className="git-title">Enrolled — BSc (Hons) Computer Science</h3>
+            <h3 className="git-title">BSc (Hons) Computer Science — UGC Approved</h3>
             <p className="git-desc">
-              Core CS principles, software engineering methodologies, and advanced problem-solving techniques. NSBM Green University, 2024–2028.
+              NSBM Green University, Sri Lanka (2024 – Present). Rigorous foundation in software engineering, algorithms, full-stack systems, and project development.
             </p>
             
             <div className="git-card">
-              <div className="gpa-header">
-                <span className="gpa-label">GPA</span>
-                <span className="gpa-value"><span style={{color: '#65d070'}}>3.49</span> / 4.00</span>
-              </div>
-              <div className="gpa-bar-bg">
-                <div className="gpa-bar-fill" style={{ width: '87.25%' }}></div>
+              <div className="status-badge" style={{ marginBottom: '1rem' }}>
+                <span className="status-dot"></span> Active Undergraduate
               </div>
               
               <div className="git-tags">
-                <span className="git-tag">Data Structures</span>
-                <span className="git-tag">Software Eng.</span>
-                <span className="git-tag">Algorithms</span>
-                <span className="git-tag">Databases</span>
+                <span className="git-tag">Software Engineering</span>
+                <span className="git-tag">Full-Stack Development</span>
+                <span className="git-tag">Algorithms & Data Structures</span>
+                <span className="git-tag">Database Systems</span>
+                <span className="git-tag">Human Computer Interaction</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Node 2 */}
+        {/* Node 2: Leadership & Activities */}
+        <div className="git-node">
+          <div className="git-line"></div>
+          <div className="git-point"></div>
+          
+          <div className="git-content">
+            <div className="git-meta">
+              <span className="git-ref">commit lead404</span>
+            </div>
+            
+            <h3 className="git-title">Head of Technical Support Team (Team Lead)</h3>
+            <p className="git-desc">
+              Compuvate Association, NSBM Green University. Led and coordinated technical support team members across university workshops and competitions.
+            </p>
+            
+            <div className="git-card">
+              <div className="git-tags">
+                <span className="git-tag">Ideathon 2.0 (Workshop & Competition)</span>
+                <span className="git-tag">AzureX 1.0</span>
+                <span className="git-tag">ProblemLab 1.0</span>
+                <span className="git-tag">Event Coordination & Delegation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Node 3: Research */}
+        <div className="git-node">
+          <div className="git-line"></div>
+          <div className="git-point"></div>
+          
+          <div className="git-content">
+            <div className="git-meta">
+              <span className="git-ref">commit res789a</span>
+            </div>
+            
+            <h3 className="git-title">Research Experience: Post-Quantum Cryptography for IoT</h3>
+            <p className="git-desc">
+              Researched post-quantum cryptographic approaches tailored for securing resource-constrained IoT devices against future quantum threats.
+            </p>
+          </div>
+        </div>
+
+        {/* Node 4: Status */}
         <div className="git-node">
           <div className="git-line last"></div>
           <div className="git-point empty"></div>
@@ -53,19 +97,19 @@ export default function AcademicBackground({ onBack }) {
               <span className="git-ref">HEAD &rarr; status</span>
             </div>
             
-            <h3 className="git-title">Third Year Undergraduate</h3>
+            <h3 className="git-title">Seeking Project Manager Internship</h3>
             <p className="git-desc">
-              Actively seeking an internship to apply academic knowledge in a professional environment and gain industry experience.
+              Eager to contribute technical foundations, task delegation skills, and stakeholder management to real-world software and cross-functional teams.
             </p>
             
             <div className="git-card">
               <div className="status-badge">
-                <span className="status-dot"></span> Open to Internships
+                <span className="status-dot"></span> Open to PM / Technical Internships
               </div>
               
               <div className="git-card-footer">
-                <span className="git-footer-text">YEAR 03 OF 04</span>
                 <span className="git-footer-text">NSBM GREEN UNIVERSITY</span>
+                <span className="git-footer-text">SRI LANKA</span>
               </div>
             </div>
           </div>
