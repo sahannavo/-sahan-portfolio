@@ -168,13 +168,13 @@ function App() {
             <div className="hero-content" style={{ zIndex: 11, pointerEvents: 'none' }}>
               <div className="hero-badge cursor-target" style={{ pointerEvents: 'auto' }}>
                 <span className="hero-badge-dot"></span>
-                <span>OPEN FOR PROJECT MANAGER / TECH INTERNSHIPS</span>
+                <span>OPEN FOR SOFTWARE DEVELOPMENT INTERNSHIP</span>
               </div>
 
               <h1 className="hero-title cursor-target" style={{ pointerEvents: 'auto' }}>Sahan Weerasingha</h1>
-              <h2 className="hero-subtitle" style={{ pointerEvents: 'auto' }}>Project Manager Intern & Developer</h2>
+              <h2 className="hero-subtitle" style={{ pointerEvents: 'auto' }}>Software Development Intern</h2>
               <p className="hero-description" style={{ pointerEvents: 'auto' }}>
-                Computer Science undergraduate at NSBM Green University with hands-on experience leading team projects and managing client web platforms from requirements to delivery. Skilled in project planning, task delegation, and full-stack development.
+                Computer Science undergraduate at NSBM Green University with hands-on software development experience across web and mobile platforms using Java, Python, JavaScript, C# and Dart. Passionate about building end-to-end features, clean architecture, and solving complex problems.
               </p>
 
               {/* Action Buttons */}
@@ -185,6 +185,18 @@ function App() {
                 >
                   Explore Projects &rarr;
                 </button>
+                <a 
+                  href="/Sahan_Weerasingha_CV.pdf"
+                  download="Sahan_Weerasingha_CV.pdf"
+                  className="hero-btn-cv cursor-target"
+                >
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px' }}>
+                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                    <polyline points="7 10 12 15 17 10" />
+                    <line x1="12" y1="15" x2="12" y2="3" />
+                  </svg>
+                  Download CV
+                </a>
                 <button 
                   className="hero-btn-secondary cursor-target"
                   onClick={() => handleNavigate('contact', '> contact')}
@@ -206,21 +218,21 @@ function App() {
                     <div className="code-title">developer.js</div>
                   </div>
                   <div className="code-body">
-                    <div><span className="code-keyword">const</span> <span className="code-variable">candidate</span> = {'{'}</div>
+                    <div><span className="code-keyword">const</span> <span className="code-variable">developer</span> = {'{'}</div>
                     <div style={{ paddingLeft: '1.2rem' }}>
                       <span className="code-property">name</span>: <span className="code-string">'Sahan Weerasingha'</span>,
                     </div>
                     <div style={{ paddingLeft: '1.2rem' }}>
-                      <span className="code-property">targetRole</span>: <span className="code-string">'Project Manager Intern'</span>,
+                      <span className="code-property">role</span>: <span className="code-string">'Software Development Intern'</span>,
                     </div>
                     <div style={{ paddingLeft: '1.2rem' }}>
-                      <span className="code-property">stack</span>: [<span className="code-string">'React'</span>, <span className="code-string">'Node'</span>, <span className="code-string">'Java'</span>],
+                      <span className="code-property">stack</span>: [<span className="code-string">'Java'</span>, <span className="code-string">'React'</span>, <span className="code-string">'Node.js'</span>, <span className="code-string">'Python'</span>],
                     </div>
                     <div style={{ paddingLeft: '1.2rem' }}>
-                      <span className="code-property">leadership</span>: [<span className="code-string">'Planning'</span>, <span className="code-string">'Delegation'</span>],
+                      <span className="code-property">backend</span>: [<span className="code-string">'Spring Boot'</span>, <span className="code-string">'Express'</span>, <span className="code-string">'MySQL'</span>],
                     </div>
                     <div style={{ paddingLeft: '1.2rem' }}>
-                      <span className="code-property">status</span>: <span className="code-string">'available'</span>
+                      <span className="code-property">status</span>: <span className="code-string">'seeking internship'</span>
                     </div>
                     <div>{'}'};</div>
                   </div>
@@ -234,20 +246,20 @@ function App() {
                       <div className="hero-stat-label">Pages Delivered</div>
                     </div>
                     <div className="hero-stat-item">
-                      <div className="hero-stat-number">100%</div>
-                      <div className="hero-stat-label">Client Handover</div>
+                      <div className="hero-stat-number">Full-Stack</div>
+                      <div className="hero-stat-label">Web & Mobile</div>
                     </div>
                   </div>
 
                   <div>
                     <div style={{ fontSize: '0.8rem', color: '#888', marginBottom: '0.6rem', fontFamily: 'JetBrains Mono', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                      // Core Domains
+                      // Core Competencies
                     </div>
                     <div className="hero-skills-mini">
-                      <span className="hero-mini-pill">Project Planning</span>
-                      <span className="hero-mini-pill">Team Lead</span>
-                      <span className="hero-mini-pill">Stakeholder Comms</span>
-                      <span className="hero-mini-pill">Full-Stack Tech</span>
+                      <span className="hero-mini-pill">Frontend (React)</span>
+                      <span className="hero-mini-pill">Backend (Node/Spring)</span>
+                      <span className="hero-mini-pill">REST APIs & MySQL</span>
+                      <span className="hero-mini-pill">Git / PR Workflow</span>
                     </div>
                   </div>
                 </div>

@@ -287,6 +287,31 @@ section {
   transform: translateY(-2px);
 }
 
+.hero-btn-cv {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(101, 208, 112, 0.1);
+  color: #65d070;
+  border: 1px solid rgba(101, 208, 112, 0.4);
+  padding: 0.75rem 1.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  font-family: 'JetBrains Mono', monospace;
+  border-radius: 8px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 15px rgba(101, 208, 112, 0.15);
+}
+
+.hero-btn-cv:hover {
+  background: #65d070;
+  color: #000000;
+  box-shadow: 0 6px 20px rgba(101, 208, 112, 0.4);
+  transform: translateY(-2px);
+}
+
 .hero-btn-secondary {
   background: transparent;
   color: #ffffff;

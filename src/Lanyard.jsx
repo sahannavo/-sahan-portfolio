@@ -243,7 +243,7 @@ function Band({
       ctx.fillStyle = '#888888';
       ctx.font = `600 ${rw * 0.042}px 'JetBrains Mono', monospace`;
       ctx.textAlign = 'center';
-      ctx.fillText('PROJECT MANAGER INTERN', rx + rw/2, cursorY);
+      ctx.fillText('SOFTWARE DEV INTERN', rx + rw/2, cursorY);
       
       // 3. Draw "SAHAN" text
       cursorY += rh * 0.09;

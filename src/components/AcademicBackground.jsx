@@ -25,7 +25,7 @@ export default function AcademicBackground({ onBack }) {
             
             <h3 className="git-title">BSc (Hons) Computer Science — UGC Approved</h3>
             <p className="git-desc">
-              NSBM Green University, Sri Lanka (2024 – Present). Rigorous foundation in software engineering, algorithms, full-stack systems, and project development.
+              NSBM Green University, Sri Lanka (2024 – Present). Rigorous foundation in software engineering, algorithms, full-stack systems, object-oriented design, and database architectures.
             </p>
             
             <div className="git-card">
@@ -37,8 +37,8 @@ export default function AcademicBackground({ onBack }) {
                 <span className="git-tag">Software Engineering</span>
                 <span className="git-tag">Full-Stack Development</span>
                 <span className="git-tag">Algorithms & Data Structures</span>
-                <span className="git-tag">Database Systems</span>
-                <span className="git-tag">Human Computer Interaction</span>
+                <span className="git-tag">Database Systems & MySQL</span>
+                <span className="git-tag">Object-Oriented Programming</span>
               </div>
             </div>
           </div>
@@ -56,7 +56,7 @@ export default function AcademicBackground({ onBack }) {
             
             <h3 className="git-title">Head of Technical Support Team (Team Lead)</h3>
             <p className="git-desc">
-              Compuvate Association, NSBM Green University. Led and coordinated technical support team members across university workshops and competitions.
+              Compuvate Association, NSBM Green University. Led and coordinated technical support team members across university workshops and hackathons.
             </p>
             
             <div className="git-card">
@@ -64,7 +64,7 @@ export default function AcademicBackground({ onBack }) {
                 <span className="git-tag">Ideathon 2.0 (Workshop & Competition)</span>
                 <span className="git-tag">AzureX 1.0</span>
                 <span className="git-tag">ProblemLab 1.0</span>
-                <span className="git-tag">Event Coordination & Delegation</span>
+                <span className="git-tag">Technical Coordination & Troubleshooting</span>
               </div>
             </div>
           </div>
@@ -97,14 +97,14 @@ export default function AcademicBackground({ onBack }) {
               <span className="git-ref">HEAD &rarr; status</span>
             </div>
             
-            <h3 className="git-title">Seeking Project Manager Internship</h3>
+            <h3 className="git-title">Seeking Software Development Internship</h3>
             <p className="git-desc">
-              Eager to contribute technical foundations, task delegation skills, and stakeholder management to real-world software and cross-functional teams.
+              Eager to learn quickly, write clean and scalable code, and contribute to production-grade web and mobile features as a Software Development Intern.
             </p>
             
             <div className="git-card">
               <div className="status-badge">
-                <span className="status-dot"></span> Open to PM / Technical Internships
+                <span className="status-dot"></span> Open to Software Engineering Internships
               </div>
               
               <div className="git-card-footer">

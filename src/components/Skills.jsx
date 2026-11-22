@@ -9,29 +9,33 @@ export default function Skills({ onBack }) {
       <h2 className="section-title">Skills & Core Competencies</h2>
       
       <div className="skills-container">
-        {/* Core PM & Leadership Competencies */}
+        {/* Core Competencies */}
         <div className="skill-category">
-          <h3>// PROJECT MANAGEMENT & LEADERSHIP</h3>
+          <h3>// CORE SOFTWARE COMPETENCIES</h3>
           <div className="skill-list">
             <div className="skill-item cursor-target">
-              <span className="skill-badge" style={{ backgroundColor: '#65d070', color: '#000' }}>P</span>
-              <span className="skill-name">Project Planning & Task Delegation</span>
+              <span className="skill-badge" style={{ backgroundColor: '#61dafb', color: '#000' }}>F</span>
+              <span className="skill-name">Front-End Development (React, HTML5, CSS3)</span>
             </div>
             <div className="skill-item cursor-target">
-              <span className="skill-badge" style={{ backgroundColor: '#65d070', color: '#000' }}>T</span>
-              <span className="skill-name">Team Leadership & Collaboration</span>
+              <span className="skill-badge" style={{ backgroundColor: '#689f38', color: '#000' }}>B</span>
+              <span className="skill-name">Back-End Development (Node.js, Spring Boot)</span>
             </div>
             <div className="skill-item cursor-target">
-              <span className="skill-badge" style={{ backgroundColor: '#65d070', color: '#000' }}>C</span>
-              <span className="skill-name">Client Communication & Requirements Gathering</span>
+              <span className="skill-badge" style={{ backgroundColor: '#65d070', color: '#000' }}>FS</span>
+              <span className="skill-name">Full-Stack Web Applications</span>
             </div>
             <div className="skill-item cursor-target">
-              <span className="skill-badge" style={{ backgroundColor: '#65d070', color: '#000' }}>S</span>
-              <span className="skill-name">Stakeholder Feedback & Iteration</span>
+              <span className="skill-badge" style={{ backgroundColor: '#4a90e2', color: '#000' }}>API</span>
+              <span className="skill-name">REST APIs & Database Design (MySQL)</span>
             </div>
             <div className="skill-item cursor-target">
-              <span className="skill-badge" style={{ backgroundColor: '#65d070', color: '#000' }}>U</span>
-              <span className="skill-name">User-Centered Design Workflow</span>
+              <span className="skill-badge" style={{ backgroundColor: '#f1502f', color: '#000' }}>GIT</span>
+              <span className="skill-name">Git, GitHub & PR Review Workflow</span>
+            </div>
+            <div className="skill-item cursor-target">
+              <span className="skill-badge" style={{ backgroundColor: '#9b59b6', color: '#000' }}>SEC</span>
+              <span className="skill-name">Authentication & Role-Based Access</span>
             </div>
           </div>
         </div>
@@ -77,7 +81,7 @@ export default function Skills({ onBack }) {
             </div>
             <div className="skill-item cursor-target">
               <span className="skill-badge" style={{ backgroundColor: '#68a063', color: '#000' }}>N</span>
-              <span className="skill-name">Node.js / Express</span>
+              <span className="skill-name">Node.js / Express.js</span>
             </div>
             <div className="skill-item cursor-target">
               <span className="skill-badge" style={{ backgroundColor: '#689f38', color: '#000' }}>S</span>
@@ -86,6 +90,10 @@ export default function Skills({ onBack }) {
             <div className="skill-item cursor-target">
               <span className="skill-badge" style={{ backgroundColor: '#02569B', color: '#fff' }}>F</span>
               <span className="skill-name">Flutter</span>
+            </div>
+            <div className="skill-item cursor-target">
+              <span className="skill-badge" style={{ backgroundColor: '#FFA611', color: '#000' }}>FB</span>
+              <span className="skill-name">Firebase</span>
             </div>
             <div className="skill-item cursor-target">
               <span className="skill-badge" style={{ backgroundColor: '#2D3748', color: '#fff' }}>P</span>
@@ -149,14 +157,13 @@ export default function Skills({ onBack }) {
             </div>
             <div className="code-body">
               <div style={{ color: '#888', whiteSpace: 'pre-wrap' }}>
-{`## Professional Profile
-Hands-on experience leading team projects
-and independently managing client websites
-from requirements to delivery.
+{`## Software Engineering Focus
+Hands-on software development experience
+in Java, Python, JavaScript, C# and Dart.
 
-Skilled in planning, task delegation,
-stakeholder communication, and iterating
-on feedback with a solid technical foundation.`}
+Building robust full-stack applications,
+designing REST APIs, and debugging
+features end to end with clean Git workflows.`}
               </div>
             </div>
           </div>
@@ -170,7 +177,7 @@ on feedback with a solid technical foundation.`}
             <div className="skill-timeline-point"></div>
             <div className="skill-timeline-content">
               <div className="skill-timeline-header">
-                <h4>Project Management & Leadership</h4>
+                <h4>Back-End & API Development</h4>
                 <div className="skill-bars">
                   <div className="bar filled"></div>
                   <div className="bar filled"></div>
@@ -179,7 +186,7 @@ on feedback with a solid technical foundation.`}
                   <div className="bar filled"></div>
                 </div>
               </div>
-              <p>Experience managing full project lifecycles from stakeholder requirements, sprints, delegation, to delivery.</p>
+              <p>Scalable RESTful services, JWT authentication, and database design with Spring Boot, Node.js/Express, MySQL, and Prisma.</p>
             </div>
           </div>
 
@@ -188,7 +195,7 @@ on feedback with a solid technical foundation.`}
             <div className="skill-timeline-point"></div>
             <div className="skill-timeline-content">
               <div className="skill-timeline-header">
-                <h4>Full-Stack Web Engineering</h4>
+                <h4>Front-End & UI Engineering</h4>
                 <div className="skill-bars">
                   <div className="bar filled"></div>
                   <div className="bar filled"></div>
@@ -197,7 +204,7 @@ on feedback with a solid technical foundation.`}
                   <div className="bar empty"></div>
                 </div>
               </div>
-              <p>Modern applications with React, Node.js, Express, Spring Boot, Prisma, and MySQL.</p>
+              <p>Responsive, dynamic web apps crafted with React, Vite, HTML5, CSS3, Chart.js, and smooth UI animations.</p>
             </div>
           </div>
 
@@ -206,7 +213,7 @@ on feedback with a solid technical foundation.`}
             <div className="skill-timeline-point"></div>
             <div className="skill-timeline-content">
               <div className="skill-timeline-header">
-                <h4>Mobile & UI/UX Workflow</h4>
+                <h4>Mobile & On-Device ML</h4>
                 <div className="skill-bars">
                   <div className="bar filled"></div>
                   <div className="bar filled"></div>
@@ -215,7 +222,7 @@ on feedback with a solid technical foundation.`}
                   <div className="bar empty"></div>
                 </div>
               </div>
-              <p>User-centered design in Figma, Flutter app prototyping with native platform channels.</p>
+              <p>Cross-platform apps built with Flutter and Dart, platform channels, and on-device machine learning with TensorFlow Lite.</p>
             </div>
           </div>
 
@@ -224,7 +231,7 @@ on feedback with a solid technical foundation.`}
             <div className="skill-timeline-point"></div>
             <div className="skill-timeline-content">
               <div className="skill-timeline-header">
-                <h4>Collaboration & Version Control</h4>
+                <h4>Git Collaboration & Team Leadership</h4>
                 <div className="skill-bars">
                   <div className="bar filled"></div>
                   <div className="bar filled"></div>
@@ -233,7 +240,7 @@ on feedback with a solid technical foundation.`}
                   <div className="bar filled"></div>
                 </div>
               </div>
-              <p>Git branching strategies, code reviews, documentation, and leading technical support teams.</p>
+              <p>Branching strategies, pull request reviews, feature debugging, and leading university technical support teams.</p>
             </div>
           </div>
 
